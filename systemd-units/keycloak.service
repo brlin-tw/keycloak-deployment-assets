@@ -40,7 +40,7 @@ CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 # Start command
-ExecStart=/opt/keycloak/bin/kc.sh start
+ExecStart=/opt/keycloak/bin/kc.sh start --optimized
 
 [Install]
 WantedBy=multi-user.target
