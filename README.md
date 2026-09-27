@@ -13,6 +13,8 @@ The following materials are referenced during the development of this product:
   Explains on how to renew step-ca issued certificates.
 * [`Environment=` | Environment | systemd.exec(5) manual page](https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html#Environment=)  
   Explains on how to properly overwrite environment variable assignments in systemd unit files.
+* [Configuring Keycloak - Keycloak](https://www.keycloak.org/server/configuration)  
+  Explains on how to configure the Keycloak server.
 
 ## Licensing
 
