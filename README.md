@@ -15,6 +15,10 @@ The following materials are referenced during the development of this product:
   Explains on how to properly overwrite environment variable assignments in systemd unit files.
 * [Configuring Keycloak - Keycloak](https://www.keycloak.org/server/configuration)  
   Explains on how to configure the Keycloak server.
+* [Write a guide about starting the server as a systemd service · Issue #10357 · keycloak/keycloak](https://github.com/keycloak/keycloak/issues/10357)  
+  Explains on how to start the Keycloak server as a systemd service.
+* [systemd.kill (5) manual page](https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html)  
+  Explains on how the `KillMode` and `SuccessExitStatus` options work in systemd unit files.
 
 ## Licensing
 

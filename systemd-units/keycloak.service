@@ -1,0 +1,46 @@
+# Keycloak systemd service unit file
+#
+# References:
+#
+# * Write a guide about starting the server as a systemd service · Issue #10357 · keycloak/keycloak
+#   https://github.com/keycloak/keycloak/issues/10357
+# * systemd.kill (5) manual page
+#   https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html
+#
+# Copyright 2022 Spacelord <https://github.com/keycloak/keycloak/issues/10357#issuecomment-1271148220>
+# Copyright 2026 林博仁(Buo-ren Lin) <buo.ren.lin@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+[Unit]
+Description=Keycloak Open Source Identity and Access Management
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=2s
+
+# Send the signal only to the JVM rather than its control group
+KillMode=mixed
+
+# When a JVM receives a SIGTERM signal it exits with code 143
+SuccessExitStatus=143
+
+# Resource limits
+LimitMEMLOCK=infinity
+LimitNOFILE=65535
+
+# Runtime environment
+User=keycloak
+Group=keycloak
+WorkingDirectory=/opt/keycloak
+
+# Allow binding ports below 1024
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+# Start command
+ExecStart=/opt/keycloak/bin/kc.sh start
+
+[Install]
+WantedBy=multi-user.target
