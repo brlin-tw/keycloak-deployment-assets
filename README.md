@@ -19,6 +19,10 @@ The following materials are referenced during the development of this product:
   Explains on how to start the Keycloak server as a systemd service.
 * [systemd.kill (5) manual page](https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html)  
   Explains on how the `KillMode` and `SuccessExitStatus` options work in systemd unit files.
+* [`TimeoutStopSec=` | Options | systemd.service(5) manual page](https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html#TimeoutStopSec=)  
+  Explains the usage of the `TimeoutStopSec` option in the systemd service unit configuration.
+* [`DefaultTimeoutStartSec=`, `DefaultTimeoutStopSec=`, `DefaultTimeoutAbortSec=`, `DefaultRestartSec=` | Timeouts and Rate Limits | systemd-system.conf (5) manual page](https://www.freedesktop.org/software/systemd/man/latest/systemd-system.conf.html#DefaultTimeoutStartSec=)  
+  Explains the default value of the `TimeoutStopSec` systemd.service(5) configuration.
 
 ## Licensing
 
